@@ -5,9 +5,6 @@
   <title>A Family Story</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="A personal story about family, resilience, and starting again.">
-
-  <!-- خط واضح -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -18,7 +15,6 @@
       color: #222;
     }
 
-    /* صورة العنوان */
     .hero {
       height: 320px;
       background-image: url("https://i.ibb.co/hRrp78ZZ/pa.jpg");
@@ -35,18 +31,19 @@
       box-shadow: 0 15px 40px rgba(0,0,0,0.25);
     }
 
-    h1 {
+    h1, h2 {
       text-align: center;
-      font-size: 34px;
-      margin: 0 0 40px;
       color: #203a43;
     }
 
+    h1 {
+      font-size: 34px;
+      margin-bottom: 35px;
+    }
+
     h2 {
-      text-align: center;
       margin-top: 45px;
       font-size: 24px;
-      color: #203a43;
     }
 
     p {
@@ -65,43 +62,38 @@
       opacity: 0.4;
     }
 
-    /* صندوق الرابط فوق الفيديو */
-    .video-link-box {
-      max-width: 620px;
-      margin: 30px auto 15px;
-      padding: 16px 20px;
-      border-radius: 12px;
-      background: #eef3f7;
-      border-left: 4px solid #2c5364;
-      text-align: center;
+    /* حاوية الفيديو */
+    .video-wrapper {
+      position: relative;
+      max-width: 700px;
+      margin: 35px auto;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      background: #000;
     }
 
-    .video-link-box span {
-      display: block;
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 6px;
-    }
-
-    .video-link-box a {
-      font-size: 18px;
+    /* رابط التبرع فوق الفيديو */
+    .overlay-link {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255,255,255,0.92);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 15px;
       font-weight: 600;
       color: #1c7ed6;
       text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 2;
+      transition: all 0.2s ease;
     }
 
-    .video-link-box a:hover {
-      text-decoration: underline;
-    }
-
-    /* فيديو أصغر درجة */
-    .video-box {
-      max-width: 720px;
-      margin: 25px auto 0;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      background: #000;
+    .overlay-link:hover {
+      background: #ffffff;
+      transform: translateX(-50%) scale(1.04);
     }
 
     video {
@@ -109,7 +101,13 @@
       display: block;
     }
 
-    /* رابط إضافي أسفل */
+    .note {
+      font-size: 14px;
+      color: #666;
+      margin-top: 12px;
+      text-align: center;
+    }
+
     .link-box {
       margin: 30px auto 10px;
       padding: 18px 22px;
@@ -120,29 +118,11 @@
       text-align: center;
     }
 
-    .link-box span {
-      display: block;
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 8px;
-    }
-
     .link-box a {
       font-size: 17px;
       font-weight: 600;
       color: #1c7ed6;
       text-decoration: none;
-    }
-
-    .link-box a:hover {
-      text-decoration: underline;
-    }
-
-    .note {
-      font-size: 14px;
-      color: #666;
-      margin-top: 14px;
-      text-align: center;
     }
 
     footer {
@@ -164,73 +144,50 @@
 
     <p>
       My name is Khaled.  
-      I once lived a stable life built through years of effort and responsibility.
+      I once lived a stable life built through years of effort.
     </p>
 
     <p>
       In a very short time, everything changed.  
-      What felt permanent disappeared, and uncertainty became part of daily life.
-    </p>
-
-    <div class="divider"></div>
-
-    <h2>My Family</h2>
-
-    <p>
-      I am a father of five children.  
-      Their safety became my priority, even when it meant painful separation.
-    </p>
-
-    <p>
-      Distance is not only physical —  
-      it is emotional and deeply difficult.
+      What was normal became uncertain.
     </p>
 
     <div class="divider"></div>
 
     <h2>A Short Visual Moment</h2>
 
-    <!-- رابط واضح فوق الفيديو -->
-    <div class="video-link-box">
-      <span>Some readers prefer to see the full background first</span>
-      <a href="https://gofund.me/3752273aa" target="_blank" rel="noopener noreferrer">
-        View full details here
-      </a>
-    </div>
+    <!-- الفيديو + الرابط فوقه -->
+    <div class="video-wrapper">
 
-    <!-- فيديو تشغيل تلقائي بدون صوت -->
-    <div class="video-box">
+      <a class="overlay-link"
+         href="https://gofund.me/3752273aa"
+         target="_blank"
+         rel="noopener noreferrer">
+        View full background
+      </a>
+
       <video autoplay muted loop playsinline preload="auto">
         <source src="xx.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+
     </div>
 
     <p class="note">
-      The video plays automatically without sound to keep a calm experience.
+      Video plays automatically without sound.
     </p>
 
     <div class="divider"></div>
 
-    <h2>More Context</h2>
-
     <p>
-      Some readers look for deeper background  
-      and a clearer picture of the situation.
+      For readers who prefer full context and details:
     </p>
 
-    <!-- تكرار الرابط بإشارة ثانية -->
     <div class="link-box">
-      <span>Additional background and details</span>
       <a href="https://gofund.me/3752273aa" target="_blank" rel="noopener noreferrer">
-        Read more details
+        Read the full story here
       </a>
     </div>
-
-    <p class="note">
-      This page is informational only.  
-      Any further action is entirely the reader’s choice.
-    </p>
 
   </div>
 
