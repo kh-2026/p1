@@ -7,7 +7,6 @@
 
   <meta name="description" content="A personal story about family, resilience, and starting again.">
 
-  <!-- خط واضح -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
@@ -18,7 +17,6 @@
       color: #222;
     }
 
-    /* صورة العنوان */
     .hero {
       height: 320px;
       background-image: url("https://i.ibb.co/hRrp78ZZ/pa.jpg");
@@ -28,17 +26,17 @@
 
     .container {
       max-width: 850px;
-      margin: -40px auto 40px;
+      margin: -30px auto 40px; /* نزلنا المحتوى */
       background: #ffffff;
       border-radius: 16px;
-      padding: 50px 40px;
+      padding: 60px 40px 50px; /* مسافة علوية أكبر */
       box-shadow: 0 15px 40px rgba(0,0,0,0.25);
     }
 
     h1 {
       text-align: center;
       font-size: 34px;
-      margin: 0 0 30px;
+      margin: 0 0 40px; /* مسافة أوضح تحت العنوان */
       color: #203a43;
     }
 
@@ -51,7 +49,7 @@
 
     p {
       line-height: 1.9;
-      margin: 18px 0;
+      margin: 20px 0;
       font-size: 16.5px;
       text-align: center;
     }
@@ -60,14 +58,15 @@
       width: 80px;
       height: 3px;
       background: #2c5364;
-      margin: 35px auto;
+      margin: 38px auto;
       border-radius: 3px;
       opacity: 0.4;
     }
 
-    /* فيديو */
+    /* فيديو أصغر درجة */
     .video-box {
-      margin: 35px 0;
+      max-width: 720px;   /* تصغير العرض */
+      margin: 35px auto;
       border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -79,10 +78,11 @@
       display: block;
     }
 
-    /* إبراز الرابط بدون زر */
+    /* إبراز الرابط */
     .link-box {
-      margin-top: 30px;
-      padding: 18px 20px;
+      margin: 30px auto 10px;
+      padding: 18px 22px;
+      max-width: 520px;
       border-radius: 12px;
       background: #f3f6f8;
       border: 1px solid #e1e5e8;
@@ -92,18 +92,34 @@
     .link-box span {
       display: block;
       font-size: 14px;
-      color: #666;
+      color: #555;
       margin-bottom: 8px;
     }
 
     .link-box a {
       font-size: 17px;
-      font-weight: 500;
+      font-weight: 600;
       color: #1c7ed6;
       text-decoration: none;
     }
 
     .link-box a:hover {
+      text-decoration: underline;
+    }
+
+    .soft-link {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .soft-link a {
+      color: #1c7ed6;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .soft-link a:hover {
       text-decoration: underline;
     }
 
@@ -159,7 +175,6 @@
 
     <h2>A Short Visual Moment</h2>
 
-    <!-- فيديو تشغيل تلقائي بدون صوت -->
     <div class="video-box">
       <video autoplay muted loop playsinline preload="auto">
         <source src="xx.mp4" type="video/mp4">
@@ -168,7 +183,7 @@
     </div>
 
     <p class="note">
-      This video plays automatically without sound to preserve a calm experience.
+      The video plays automatically without sound to keep a calm experience.
     </p>
 
     <div class="divider"></div>
@@ -180,11 +195,19 @@
       and a clearer picture of the situation.
     </p>
 
-    <!-- إبراز الرابط بشكل ذكي -->
+    <!-- الإشارة الأولى -->
     <div class="link-box">
-      <span>Additional background and details can be found here</span>
+      <span>Additional background and details</span>
       <a href="https://gofund.me/3752273aa" target="_blank" rel="noopener noreferrer">
         Read more details
+      </a>
+    </div>
+
+    <!-- الإشارة الثانية (أخف) -->
+    <div class="soft-link">
+      You may also find more context here → 
+      <a href="https://gofund.me/3752273aa" target="_blank" rel="noopener noreferrer">
+        view details
       </a>
     </div>
 
